@@ -31,7 +31,12 @@ This project was part of my Computer Science IA for the IB where I aimed to crea
 25)	PDF Report of students booking rooms
 
 ## Technologies used
-
+- Java
+- JavaFX
+- MySQL
+- PhpMyAdmin
 
 ## Additional notes
+A video will be available in the repo which goes over many of the core functions of the program. 
 
+It should also be noted that this project was done long before learning good proper programming concepts such as organized file structure and useful commenting. This has since improved. The final product however is still worth publishing due to its core abilities.
