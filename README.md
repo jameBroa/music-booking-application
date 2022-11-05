@@ -37,6 +37,12 @@ This project was part of my Computer Science IA for the IB where I aimed to crea
 - PhpMyAdmin
 
 ## Additional notes
-A video will be available in the repo which goes over many of the core functions of the program. 
+It should be noted that this project was done long before learning good proper programming concepts such as organized file structure and useful commenting. This has since improved. The final product however is still worth publishing due to its core abilities.
 
-It should also be noted that this project was done long before learning good proper programming concepts such as organized file structure and useful commenting. This has since improved. The final product however is still worth publishing due to its core abilities.
+A very rough video highlighting the capabilities of the program is below:
+
+
+
+[![Music Booking Application Showcase](http://img.youtube.com/vi/ghAcltpY-CQ/0.jpg)](https://www.youtube.com/watch?v=ghAcltpY-CQ "Music Booking Application Showcase")
+
+
