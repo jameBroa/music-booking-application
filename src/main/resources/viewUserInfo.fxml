@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPaneViewUserInfo" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.ControllerUserModel">
+   <children>
+      <TableView fx:id="tableUsers" layoutX="14.0" layoutY="14.0" onMouseClicked="#getSelectedUser" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="64.0">
+        <columns>
+          <TableColumn fx:id="col_firstName" prefWidth="75.0" text="First Name" />
+          <TableColumn fx:id="col_LastName" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="col_YearGroup" prefWidth="75.0" text="Year" />
+            <TableColumn fx:id="col_Class" prefWidth="75.0" text="Class" />
+            <TableColumn fx:id="col_SchoolID" prefWidth="75.0" text="School ID" />
+            <TableColumn fx:id="col_AppID" prefWidth="75.0" text="App ID" />
+            <TableColumn fx:id="col_Comment" prefWidth="121.0" text="Comment" />
+        </columns>
+      </TableView>
+      <TextField fx:id="TFIDSearch" layoutX="14.0" layoutY="22.0" onKeyReleased="#searchID" prefHeight="20.0" prefWidth="100.0" promptText="ID" AnchorPane.leftAnchor="79.0" AnchorPane.topAnchor="22.0" />
+      <TextField fx:id="TFNameSearch" layoutX="24.0" layoutY="32.0" onKeyReleased="#searchName" prefHeight="20.0" prefWidth="100.0" promptText="Name" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="22.0" />
+      <JFXDrawer fx:id="drawerAdmin" direction="RIGHT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button layoutX="319.0" layoutY="22.0" mnemonicParsing="false" onAction="#goMainAdminPage" prefHeight="20.0" prefWidth="55.0" text="BACK" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="22.0" />
+      <JFXHamburger fx:id="hamburger" layoutX="556.0" layoutY="26.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="13.0" />
+      <Button mnemonicParsing="false" text="PDF" onAction="#createPDF" viewOrder="1" AnchorPane.leftAnchor="484.0" AnchorPane.topAnchor="22.0" />
+      <Button layoutX="469.0" layoutY="22.0" onAction="#deleteUser" prefWidth="65.0" text="DELETE" viewOrder="1" AnchorPane.leftAnchor="409.0" AnchorPane.topAnchor="22.0" />
+      <Button layoutX="400.0" layoutY="22.0" mnemonicParsing="false" onAction="#editUser" prefWidth="45.0" text="EDIT" AnchorPane.leftAnchor="354.0" AnchorPane.topAnchor="22.0" />
+      <Button layoutX="325.0" layoutY="22.0" mnemonicParsing="false" onAction="#addUser" prefWidth="45.0" text="ADD" AnchorPane.leftAnchor="299.0" />
+   </children>
+</AnchorPane>

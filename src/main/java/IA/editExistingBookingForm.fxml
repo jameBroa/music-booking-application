@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.ControllerEditForms">
+    <children>
+        <JFXDrawer fx:id="drawerUser" layoutX="-6.0" layoutY="67.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <JFXHamburger fx:id="hamburgerUser" layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="10.0" />
+        <TextField fx:id="TFBookingTime" layoutX="68.0" layoutY="53.0" promptText="Booking Time" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="70.0" />
+        <TextField fx:id="TFBookingDate" layoutX="220.0" layoutY="53.0" promptText="Booking Date" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0" />
+        <Separator layoutX="59.0" layoutY="52.0" prefWidth="200.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="130.0" />
+        <TextField fx:id="TFBookingCapacity" layoutX="170.0" layoutY="187.0" promptText="Capacity" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="187.0" />
+        <Separator layoutX="69.0" layoutY="62.0" prefWidth="200.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="130.0" />
+        <TextArea fx:id="TABookingComment" layoutX="102.0" layoutY="268.0" prefHeight="82.0" prefWidth="236.0" promptText="Booking Comment" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0" />
+        <Button layoutX="193.0" layoutY="321.0" mnemonicParsing="false" onAction="#updateBooking" text="SUBMIT CHANGE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="330.0" />
+        <Label alignment="CENTER" layoutX="205.0" layoutY="26.0" prefHeight="29.0" prefWidth="163.0" text="EDIT BOOKING" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="369.0" text="A blank field will exhibit no changes" textAlignment="CENTER" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="70.0" />
+      <TextArea fx:id="TABookingPurpose" layoutX="110.0" layoutY="120.0" prefHeight="20.0" prefWidth="220.0" promptText="Booking Purpose" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="120.0" />
+      <Label layoutX="123.0" layoutY="52.0" text="Booking Time" />
+      <Label layoutX="243.0" layoutY="50.0" text="Date" />
+      <Label layoutX="196.0" layoutY="100.0" text="Purpose" />
+      <Label layoutX="194.0" layoutY="166.0" text="Capacity" />
+      <Label layoutX="188.0" layoutY="217.0" text="Comment" />
+    </children>
+</AnchorPane>

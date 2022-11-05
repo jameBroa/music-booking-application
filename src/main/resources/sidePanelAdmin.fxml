@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" fx:controller="IA.ControllerAdminPage" prefWidth="100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="100.0" style="-fx-background-color: #48cae4;">
+         <children>
+            <Button id="homeButton" layoutX="53.0" layoutY="92.0" mnemonicParsing="false" prefHeight="50.0" style="-fx-background-color: #48cae4;" onAction="#returnHomeAdmin" stylesheets="@adminSidePanel.css" text="HOME" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+            <Button layoutX="53.0" layoutY="92.0" mnemonicParsing="false" prefHeight="50.0" style="-fx-background-color: #48cae4;" stylesheets="@adminSidePanel.css" text="CLASSES" textFill="WHITE" onAction="#goEditExistingClasses" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
+            <Button layoutX="23.0" layoutY="62.0" mnemonicParsing="false" prefHeight="50.0" style="-fx-background-color: #14525e;" stylesheets="@adminSidePanel.css" text="USER" onAction="#goViewUserInfo" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="150" />
+            <Button layoutX="33.0" layoutY="72.0" mnemonicParsing="false" prefHeight="50.0" style="-fx-background-color: #48cae4;" stylesheets="@adminSidePanel.css" text="ROOMS" onAction="#goViewRoomInfo" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="100" />
+            <Button layoutX="43.0" layoutY="82.0" mnemonicParsing="false" prefHeight="50.0" style="-fx-background-color: #48cae4;" stylesheets="@adminSidePanel.css" text="BOOKINGS" onAction="#goViewBookingInfo" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="50" />
+            <Button layoutX="53.0" layoutY="92.0" mnemonicParsing="false" prefHeight="50.0" style="-fx-background-color: #48cae4;"  onAction="#goHome" stylesheets="@adminSidePanel.css" text="LOGOUT" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.ControllerAdminPage">
+    <children>
+        <AnchorPane prefHeight="489.0" prefWidth="100.0" style="-fx-background-color: #48cae4;">
+            <children>
+                <Button layoutX="53.0" layoutY="92.0" mnemonicParsing="false" onAction="#goAdmin" prefHeight="50.0" style="-fx-background-color: #48cae4;" stylesheets="@adminSidePanel.css" text="HELP" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                <Button layoutX="23.0" layoutY="62.0" mnemonicParsing="false" prefHeight="50.0" style="-fx-background-color: #48cae4;" stylesheets="@adminSidePanel.css" text="USER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
+                <Button layoutX="33.0" layoutY="72.0" mnemonicParsing="false" prefHeight="50.0" style="-fx-background-color: #48cae4;" stylesheets="@adminSidePanel.css" text="ROOMS"  textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0" />
+                <Button layoutX="43.0" layoutY="82.0" mnemonicParsing="false" prefHeight="50.0" style="-fx-background-color: #48cae4;" stylesheets="@adminSidePanel.css" text="BOOKINGS" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="190.0" />
+                <Button layoutX="53.0" layoutY="92.0" mnemonicParsing="false" onAction="#goHome" prefHeight="50.0" style="-fx-background-color: #48cae4;" stylesheets="@adminSidePanel.css" text="LOGOUT" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

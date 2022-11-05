@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.ControllerAdminPage">
+   <children>
+      <Label fx:id="labelTitle" layoutX="97.0" layoutY="28.0" text="EDIT ADMIN DETAILS">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Separator layoutX="247.0" layoutY="91.0" orientation="VERTICAL" prefHeight="143.0" prefWidth="0.0" />
+      <Label fx:id = "labelHostChange" layoutX="39.0" layoutY="104.0" text="Change Host Server IP Address">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TFIP" layoutX="51.0" layoutY="149.0" promptText="EG: 192.168.4.58" />
+      <Button fx:id="submitIPChange" onAction="#changeIPAddress" layoutX="99.0" layoutY="200.0" mnemonicParsing="false" text="SUBMIT" />
+      <Label layoutX="294.0" layoutY="104.0" text="Change Admin login details">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TFUsername" layoutX="294.0" layoutY="125.0" promptText="USERNAME" />
+      <TextField fx:id="TFPassword" layoutX="294.0" layoutY="159.0" promptText="PASSWORD" />
+      <Button onAction="#changeAdminDetails" layoutX="342.0" layoutY="200.0" mnemonicParsing="false" text="SUBMIT" />
+      <Button fx:id="buttonBack" onAction="#goMainAdmin" layoutX="18.0" layoutY="35.0" mnemonicParsing="false" text="BACK" />
+   </children>
+</AnchorPane>

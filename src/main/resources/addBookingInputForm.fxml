@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="IA.ControllerInputForms" prefHeight="450.0" prefWidth="450.0">
+    <children>
+        <ChoiceBox fx:id="choiceBoxBookingDuration" value="15 minutes"  AnchorPane.topAnchor="50" AnchorPane.RightAnchor="100" >
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="15 minutes"/>
+                    <String fx:value="30 minutes"/>
+                    <String fx:value="45 minutes"/>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <ChoiceBox fx:id="choiceBoxBookingStart" value="12:15" onAction = "#updateStartingTimeChoiceBox" AnchorPane.topAnchor="50" AnchorPane.LeftAnchor="100" >
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="12:15"/>
+                    <String fx:value="12:30"/>
+                    <String fx:value="12:45"/>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <ChoiceBox fx:id="choiceBoxDate" value="DATE" AnchorPane.topAnchor="85" AnchorPane.rightAnchor="140">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="DATE"/>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Label fx:id="labelBookingPurpose" mnemonicParsing="false" prefHeight="27.0" text="Purpose:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="123.0">
+            <font>
+                <Font name="SansSerif Regular" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textFieldBookingPurpose" prefHeight="27.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="125.0" />
+
+        <Label fx:id="labelStudentID" mnemonicParsing="false" prefHeight="27.0" text="Student ID:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="175.0">
+            <font>
+                <Font name="SansSerif Regular" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textFieldStuID" prefHeight="27.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="175.0" />
+
+        <ChoiceBox fx:id="choiceBoxRooms" value="ROOM" onAction ="#updateBookingText" AnchorPane.topAnchor="220" AnchorPane.rightAnchor="80">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="ROOM"/>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Label fx:id="labelBookingGuests" mnemonicParsing="false" prefHeight="27.0" text="Guests:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="225.0">
+            <font>
+                <Font name="SansSerif Regular" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textFieldBookingGuests" prefHeight="27.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="275.0" AnchorPane.topAnchor="225.0" />
+
+        <Label fx:id="labelBookingComment" mnemonicParsing="false" prefHeight="27.0" text="Comment:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="280.0">
+            <font>
+                <Font name="SansSerif Regular" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textFieldBookingComment" prefHeight="54.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="275.0" />
+
+        <Label fx:id="labelBookingsThatExist" mnemonicParsing="false" text="Bookings for this room includes: " AnchorPane.leftAnchor="20.0" AnchorPane.bottomAnchor="50">
+                <font>
+                    <Font name="SansSerif Regular" size="16.0"/>
+                </font>
+        </Label>
+        <Button fx:id="buttonReturn" mnemonicParsing="false" onAction="#returnBacktoBookingScreen" text="RETURN" AnchorPane.bottomAnchor="405.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="20.0" />
+        <Button fx:id="buttonSubmit" mnemonicParsing="false" onAction="#submitBooking" text="SUBMIT" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" />
+
+    </children>
+</AnchorPane>

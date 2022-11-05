@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: WHITE; -fx-background-color: linear-gradient(to top, #1D3557, #457B9D) " xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.ControllerAdminPage">
+   <children>
+      <Button fx:id="buttonReturn" layoutX="17.0" layoutY="297.0" mnemonicParsing="false" onAction="#returnHomeAdmin" text="RETURN" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font></Button>
+      <Button id="buttonUser" fx:id="buttonUserSettings" layoutX="170.0" layoutY="14.0" mnemonicParsing="false" onAction="#goViewUserInfo" prefHeight="80.0" prefWidth="180.0" stylesheets="@adminPage.css" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="100.0">
+         <graphic>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="100.0" text="USER SETTINGS" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="27.0" />
+               </children>
+            </AnchorPane>
+         </graphic></Button>
+      <Button id="buttonRooms" fx:id="buttonRoomSettings" layoutX="170.0" layoutY="105.0" mnemonicParsing="false" onAction="#goViewRoomInfo" prefHeight="80.0" prefWidth="180.0" stylesheets="@adminPage.css" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="100.0">
+         <graphic>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label text="ROOM SETTINGS" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="29.0" />
+               </children>
+            </AnchorPane>
+         </graphic></Button>
+      <Button id="buttonBooking" fx:id="buttonBookingSettings" layoutX="170.0" layoutY="206.0" mnemonicParsing="false" onAction="#goViewBookingInfo" prefHeight="80.0" prefWidth="180.0" stylesheets="@adminPage.css" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="100.0">
+         <graphic>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label text="BOOKING SETTINGS" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+               </children>
+            </AnchorPane>
+         </graphic></Button>
+      <Label maxWidth="218.0" prefHeight="44.0" prefWidth="218.0" text="ADMIN PAGE" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="182.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Separator AnchorPane.leftAnchor="100" AnchorPane.rightAnchor="100" AnchorPane.topAnchor="70.0" />
+      <Button layoutX="531.0" layoutY="337.0" mnemonicParsing="false" onAction="#goEditAdminInfo" prefHeight="20.0" prefWidth="130.0" text="ADMIN SETTINGS" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="179.0" layoutY="383.0" text="&quot;Icon made by Google from www.flaticon.com&quot;" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="171.0" AnchorPane.rightAnchor="171.0">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

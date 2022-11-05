@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.ControllerBookingModel">
+    <children>
+        <TableView fx:id="tableBooking" onMouseClicked="#getSelectedBooking" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="64.0">
+            <columns>
+                <TableColumn fx:id="col_bookingTime" prefWidth="75.0" text="Time (start  | duration)" />
+                <TableColumn fx:id="col_bookingDate" prefWidth="75.0" text="Date" />
+                <TableColumn fx:id="col_bookingPurpose" prefWidth="75.0" text="Purpose" />
+                <TableColumn fx:id="col_bookingID" prefWidth="75.0" text="Booking ID" />
+                <TableColumn fx:id="col_bookingComment" prefWidth="75.0" text="Comment" />
+                <TableColumn fx:id="col_userID" prefWidth="75.0" text="userID" />
+                <TableColumn fx:id="col_roomID" prefWidth="75.0" text="roomID" />
+                <TableColumn fx:id="col_bookingGuests" prefWidth="75.0" text="Guests" />
+            </columns>
+        </TableView>
+        <TextField fx:id="TFUserIDSearch" layoutX="14.0" layoutY="22.0" onKeyReleased="#searchUserID" prefHeight="20.0" prefWidth="80.0" promptText="User ID" AnchorPane.leftAnchor="79.0" AnchorPane.topAnchor="22.0" />
+        <TextField fx:id="TFDateSearch" layoutX="24.0" layoutY="32.0"  onKeyReleased ="#searchDate" prefHeight="20.0" prefWidth="80.0" promptText="Booking Date" AnchorPane.leftAnchor="169.0" AnchorPane.topAnchor="22.0" />
+        <Button fx:id="buttonEditBooking" text="EDIT"  onAction="#editBooking" AnchorPane.topAnchor="22" prefWidth ="45" AnchorPane.leftAnchor="259"/>
+        <Button fx:id="buttonDelBooking" text="DELETE"  onAction="#deleteBooking" AnchorPane.topAnchor="22" prefWidth ="65" AnchorPane.leftAnchor="314"/>
+        <Button layoutX="319.0" layoutY="22.0" mnemonicParsing="false" onAction="#goMainAdminPage" prefHeight="20.0" prefWidth="55.0" text="BACK" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="22.0" />
+        <JFXDrawer fx:id="drawerAdmin" direction="RIGHT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <JFXHamburger fx:id="hamburger" layoutX="556.0" layoutY="26.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="13.0" />
+
+    </children>
+</AnchorPane>

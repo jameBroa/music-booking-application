@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="editClassesAnchorPane" prefHeight="323.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.ControllerAdminPage">
+   <children>
+      <AnchorPane prefHeight="323.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="435.0" text="ADMIN USER YEAR GROUPS CONTROL" textAlignment="CENTER" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="13.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="323.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goViewUserInfo" text="BACK" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0" />
+                  <Label text="ADD CLASSES/TUTOR GROUPS" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="70.0" />
+                  <CheckBox layoutX="14.0" layoutY="94.0" mnemonicParsing="false" text="CLASSES" visible="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="100.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="85.0" layoutY="94.0" mnemonicParsing="false" text="TUTOR GROUPS" visible="false" AnchorPane.leftAnchor="91.5" AnchorPane.topAnchor="100.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </CheckBox>
+                  <Button layoutX="30.0" layoutY="200.0" mnemonicParsing="false" onAction="#addNewTutorGroup" prefHeight="40.0" prefWidth="180.0" text="SUBMIT" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <TextField fx:id="TFYear7Add" promptText="EG: 7A" layoutX="15.0" layoutY="102.0" prefHeight="27.0" prefWidth="80.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="100.0" />
+                  <TextField fx:id="TFYear8Add" promptText="EG: 8B" layoutX="107.0" layoutY="102.0" prefHeight="27.0" prefWidth="80.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0" />
+                  <TextField fx:id="TFYear9Add" promptText="EG: 9E" layoutX="25.0" layoutY="112.0" prefHeight="27.0" prefWidth="80.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="140.0" />
+                  <TextField fx:id="TFYear10Add" promptText="EG: 10Y" layoutX="35.0" layoutY="122.0" prefHeight="27.0" prefWidth="80.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="140.0" />
+                  <TextField fx:id="TFYear11Add" promptText="EG: 11O" layoutX="35.0" layoutY="122.0" prefHeight="27.0" prefWidth="80.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="180.0" />
+                  <TextField fx:id="TFYear12Add" promptText="EG: 12I" layoutX="45.0" layoutY="132.0" prefHeight="27.0" prefWidth="80.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="180.0" />
+                  <TextField fx:id="TFYear13Add" promptText="EG: 13N" layoutX="55.0" layoutY="142.0" prefHeight="27.0" prefWidth="80.0" AnchorPane.leftAnchor="15.0"  AnchorPane.topAnchor="220.0" />
+                  <Button prefWidth="80" prefHeight="27" text="CLEAR" onAction="#clearFieldsEditClasses" AnchorPane.rightAnchor="15" AnchorPane.topAnchor="220"/>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="323.0" prefWidth="200.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="100.0" layoutY="107.0" text="EDIT CLASSES/TUTOR GROUPS" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="70.0" />
+                  <ChoiceBox fx:id="choiceBoxYearGroupsEdit" layoutX="14.0" layoutY="149.0" onAction="#updateTutorGroups" prefWidth="75.0" value="Year 7" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Year 7" />
+                           <String fx:value="Year 8" />
+                           <String fx:value="Year 9" />
+                           <String fx:value="Year 10" />
+                           <String fx:value="Year 11" />
+                           <String fx:value="Year 12" />
+                           <String fx:value="Year 13" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="choiceBoxTutorGroups" layoutX="100.0" layoutY="149.0" prefWidth="75.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="120.0" />
+                  <TextField fx:id="TFEditedTutorGroup" layoutX="20.0" layoutY="187.0" AnchorPane.topAnchor="160.0" />
+                  <Button layoutX="73.0" layoutY="230.0" onAction="#editTutorGroup" mnemonicParsing="false" prefHeight="40.0" prefWidth="0.0" text="SUBMIT" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="323.0" prefWidth="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label text="ADJUST TUTOR/YEAR GROUPS" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="70.0" />
+                  <Button layoutX="73.0" layoutY="187.0" mnemonicParsing="false" prefHeight="40.0" text="INCREASE YEARS" onAction="#increaseYearGroups" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="130.0" />
+                  <Button layoutX="83.0" layoutY="197.0" mnemonicParsing="false" prefHeight="40.0" text="DECREASE YEARS" onAction="#decreaseYearGroups" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="180.0" />
+                  <Button prefHeight="40" text="DELETE ALL YEARS" onAction="#deleteAllYears" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30" AnchorPane.topAnchor="230" />
+               </children>
+            </AnchorPane>
+            <Separator orientation="VERTICAL" prefHeight="250.0" prefWidth="6.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="60.0" />
+            <Separator orientation="VERTICAL" prefHeight="250.0" prefWidth="6.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="60.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

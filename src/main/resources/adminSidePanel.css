@@ -1,0 +1,14 @@
+.button:hover{
+-fx-border-color:#14525e;
+}
+
+.button{
+-fx-alignment: center-right;
+-fx-border-radius:0;
+-fx-background-radius:0;
+}
+
+#homeButton{
+ -fx-graphic: url("../Icons/homeIcon.png");
+ -fx-graphic-color:"white";
+}

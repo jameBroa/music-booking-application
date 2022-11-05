@@ -1,0 +1,22 @@
+.text-field {
+    -fx-alignment: center;
+    -fx-prompt-text-fill: #dedede;
+    -fx-text-fill: #dedede;
+}
+.text-field:empty:focused {
+    -fx-alignment: center-left;
+}
+
+.button:hover {
+-fx-border-color:#A8DADC;
+}
+
+.button{
+-fx-border-radius:3;
+}
+
+.pane {
+    -fx-background-color: #8fbc8f;
+}
+
+

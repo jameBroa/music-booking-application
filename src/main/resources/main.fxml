@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="labelPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.ControllerMain">
+   <children>
+
+
+
+      <Pane prefHeight="490" prefWidth="600" style="-fx-background-color: linear-gradient(to top, #1D3557, #457B9D) ">
+
+         <AnchorPane prefHeight="490.0" prefWidth="600.0">
+
+            <Separator fx:id="seperatorLogin" opacity="0.2" AnchorPane.bottomAnchor="140" AnchorPane.leftAnchor="120" AnchorPane.rightAnchor="120" />
+            <TextField fx:id="TFEnterID" alignment="CENTER" promptText="USER ID" style="-fx-background-color: #1D3557; -fx-border-color:#A8DADC; -fx-border-radius: 3; -fx-alignment: center; -fx-background-border-radius: 3;" stylesheets="@centeredTextview.css" AnchorPane.bottomAnchor="253.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="210.0" />
+      <Button fx:id="buttonEnterProgram" mnemonicParsing="false" onAction="#enterProgram" style="-fx-background-color: #457B9D" stylesheets="@centeredTextview.css" text="LOGIN" textFill="WHITE" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="280.0" />
+      <Button fx:id="buttonRegisterUser" mnemonicParsing="false" onAction="#goSignup" style="-fx-background-color: #457B9D" stylesheets="@centeredTextview.css" text="SIGN UP" textFill="WHITE" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="310.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="280.0" />
+
+         </AnchorPane>
+
+      </Pane>
+
+      <HBox fx:id="topBanner" prefHeight="180.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom middle, #1D3557, #457B9D); -fx-border-radius: 10;">
+         <children>
+            <AnchorPane prefHeight="181.0" prefWidth="600.0" style="-fx-border-radius: 10;">
+               <children>
+                  <Separator opacity="0.2" AnchorPane.leftAnchor="60" AnchorPane.rightAnchor="60" AnchorPane.topAnchor="170" />
+                  <Label prefHeight="48.0" prefWidth="220.0" text="WELCOME" textFill="WHITE" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="100.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="42.0" />
+                     </font>
+
+                  </Label>
+
+               </children>
+
+
+            </AnchorPane>
+
+         </children>
+      </HBox>
+
+      <Pane fx:id="paneSideBar" style="-fx-background-color: #1D3557" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="450" AnchorPane.topAnchor="0">
+         <children>
+            <AnchorPane prefHeight="490.0" prefWidth="150.0">
+            <Button fx:id="buttonHome" mnemonicParsing="false" onAction="#goBooking" stylesheets="@styleHomePage.css" text="HOME" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="330.0" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10" />
+            <Button fx:id="buttonReport" mnemonicParsing="false" onAction="#goReport" stylesheets="@styleHomePage.css" text="REPORT" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="170.0" />
+            <Button fx:id="buttonAdmin" mnemonicParsing="false" onAction="#goAdmin" stylesheets="@styleHomePage.css" text="ADMIN" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="330.0" />
+            </AnchorPane>
+
+         </children>
+      </Pane>
+      <Pane fx:id="paneMainFunctions" prefHeight="490" style="-fx-background-color: #FFFFFF;" visible="false" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="150" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+         <AnchorPane fx:id="anchorPaneMainFunctions" maxHeight="490.0" maxWidth="490.0" prefHeight="490.0" prefWidth="450.0">
+            <Label fx:id="reportLabel" prefHeight="48.0" prefWidth="220.0" text="REPORT YOUR BOOKINGS" textFill="BLACK" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+
+            </Label>
+            <TableView fx:id="tableUserBookings" layoutX="14.0" layoutY="14.0" onMouseClicked="#getSelectedBooking" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="54.0">
+               <columns>
+                  <TableColumn fx:id="col_bookingTime" prefWidth="75.0" text="Time (start  | duration)" />
+                  <TableColumn fx:id="col_bookingDate" prefWidth="75.0" text="Date" />
+                  <TableColumn fx:id="col_bookingPurpose" prefWidth="75.0" text="Purpose" />
+                  <TableColumn fx:id="col_bookingID" prefWidth="75.0" text="Booking ID" />
+                  <TableColumn fx:id="col_roomID" prefWidth="75.0" text="roomID" />
+                  <TableColumn fx:id="col_bookingGuests" prefWidth="75.0" text="Guests" />
+               </columns>
+            </TableView>
+            <JFXDrawer fx:id="drawerUserOptions" direction="RIGHT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            
+            <Label fx:id="loggedInUserID" mnemonicParsing="false" text="User: " visible="false" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="10">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+
+            <Button fx:id="loggedInUserButton" mnemonicParsing="false" style="-fx-background-radius:100;" text="blank" visible="false" AnchorPane.rightAnchor="27" AnchorPane.topAnchor="7" />
+            <JFXTextArea fx:id="reportCommentTextArea" viewOrder="1" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="284.0" />
+            <JFXButton fx:id="submitReportButton" mnemonicParsing="false" onAction="#sendReport" prefWidth="10" text="SUBMIT REPORT" viewOrder="1" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="240.0" />
+            <JFXButton fx:id="exportTableButton" mnemonicParsing="false" onAction="#sendReport" prefWidth="10" text="EXPORT TABLE" viewOrder="1" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="30.0" />
+
+            <AnchorPane fx:id="monAnchor" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px;" viewOrder="1" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <JFXButton styleClass="buttonAnchor" stylesheets="@mainPageAnchorPanes.css" fx:id="monButton" onMouseEntered="#setMonHover" onMouseExited="#removeMonHover" prefWidth="150.0" style="-fx-background-color: WHITE; -fx-background-radius:10px" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane prefHeight="80.0" viewOrder="1" prefWidth="170.0" style="-fx-background-color: #457B9D; -fx-background-radius:10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="monButtonPane" layoutX="10.0" layoutY="5.0" prefHeight="70.0" prefWidth="22.0" style="-fx-background-color: #6eb1db;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="monRooms" AnchorPane.leftAnchor="210" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: WHITE; -fx-border-radius:5px;" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="monBookings" AnchorPane.leftAnchor="320.0" layoutX="225.0" layoutY="37.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: WHITE;" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0"  AnchorPane.topAnchor="5.0" />
+                  <AnchorPane fx:id="monButtonRoomsPane" layoutX="220.0" layoutY="5.0" AnchorPane.leftAnchor="210" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #6eb1db#6eb1db; -fx-background-radius:10px;" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane fx:id="monButtonBookingsPane" layoutX="310.0" layoutY="5.0" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #6eb1db#6eb1db; -fx-background-radius:10px;" AnchorPane.leftAnchor="320" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane layoutX="10.0" viewOrder ="1" layoutY="10.0" AnchorPane.leftAnchor="200" style="-fx-background-color: #457B9D; -fx-background-radius:10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="tueAnchor" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" viewOrder="1" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="130.0">
+               <children>
+                  <JFXButton styleClass="buttonAnchor" stylesheets="@mainPageAnchorPanes.css" fx:id="tueButton" onMouseEntered="#setTueHover" onMouseExited="#removeTueHover" prefWidth="150.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane prefHeight="80.0" viewOrder="1" prefWidth="170.0" style="-fx-background-color: #457B9D; -fx-background-radius:10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="tueButtonPane" layoutX="10.0" layoutY="5.0" prefHeight="70.0" prefWidth="22.0" style="-fx-background-color: #6eb1db;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="tueRooms" AnchorPane.leftAnchor="210" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: WHITE; -fx-border-radius:5px;" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="tueBookings" AnchorPane.leftAnchor="320.0" layoutX="225.0" layoutY="37.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: WHITE;" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0"  AnchorPane.topAnchor="5.0" />
+                  <AnchorPane fx:id="tueButtonRoomsPane" layoutX="220.0" layoutY="5.0" AnchorPane.leftAnchor="210" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #6eb1db#6eb1db;" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane fx:id="tueButtonBookingsPane" layoutX="310.0" layoutY="5.0" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #6eb1db#6eb1db;" AnchorPane.leftAnchor="320" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane layoutX="10.0" viewOrder ="1" layoutY="10.0" AnchorPane.leftAnchor="200" style="-fx-background-color: #457B9D; -fx-background-radius:10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="wedAnchor" layoutX="20.0" layoutY="20.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" viewOrder="1" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="220.0">
+               <children>
+                  <JFXButton styleClass="buttonAnchor" stylesheets="@mainPageAnchorPanes.css" fx:id="wedButton" onMouseEntered="#setWedHover" onMouseExited="#removeWedHover" prefWidth="150.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane prefHeight="80.0" viewOrder="1" prefWidth="170.0" style="-fx-background-color: #457B9D; -fx-background-radius:10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="wedButtonPane" layoutX="10.0" layoutY="5.0" prefHeight="70.0" prefWidth="22.0" style="-fx-background-color: #6eb1db;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="wedRooms" AnchorPane.leftAnchor="210" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: WHITE; -fx-border-radius:5px;" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="wedBookings" AnchorPane.leftAnchor="320.0" layoutX="225.0" layoutY="37.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: WHITE;" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0"  AnchorPane.topAnchor="5.0" />
+                  <AnchorPane fx:id="wedButtonRoomsPane" layoutX="220.0" layoutY="5.0" AnchorPane.leftAnchor="210" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #6eb1db#6eb1db;" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane fx:id="wedButtonBookingsPane" layoutX="310.0" layoutY="5.0" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #6eb1db#6eb1db;" AnchorPane.leftAnchor="320" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane layoutX="10.0" viewOrder ="1" layoutY="10.0" AnchorPane.leftAnchor="200" style="-fx-background-color: #457B9D; -fx-background-radius:10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="thurAnchor" layoutX="30.0" layoutY="30.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" viewOrder="1" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="310.0">
+               <children>
+                  <JFXButton styleClass="buttonAnchor" stylesheets="@mainPageAnchorPanes.css" fx:id="thurButton" onMouseEntered="#setThurHover" onMouseExited="#removeThurHover" prefWidth="150.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane prefHeight="80.0" viewOrder="1" prefWidth="170.0" style="-fx-background-color: #457B9D; -fx-background-radius:10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="thurButtonPane" layoutX="10.0" layoutY="5.0" prefHeight="70.0" prefWidth="22.0" style="-fx-background-color: #6eb1db;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="thurRooms" AnchorPane.leftAnchor="210" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: WHITE; -fx-border-radius:5px;" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="thurBookings" AnchorPane.leftAnchor="320.0" layoutX="225.0" layoutY="37.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: WHITE;" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0"  AnchorPane.topAnchor="5.0" />
+                  <AnchorPane fx:id="thurButtonRoomsPane" layoutX="220.0" layoutY="5.0" AnchorPane.leftAnchor="210" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #6eb1db#6eb1db;" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane fx:id="thurButtonBookingsPane" layoutX="310.0" layoutY="5.0" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #6eb1db#6eb1db;" AnchorPane.leftAnchor="320" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane layoutX="10.0" viewOrder ="1" layoutY="10.0" AnchorPane.leftAnchor="200" style="-fx-background-color: #457B9D; -fx-background-radius:10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="friAnchor" layoutX="40.0" layoutY="40.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" viewOrder="1" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="400.0">
+               <children>
+                  <JFXButton styleClass="buttonAnchor" stylesheets="@mainPageAnchorPanes.css" fx:id="friButton" onMouseEntered="#setFriHover" onMouseExited="#removeFriHover" prefWidth="150.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane prefHeight="80.0" viewOrder="1" prefWidth="170.0" style="-fx-background-color: #457B9D; -fx-background-radius:10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="friButtonPane" layoutX="10.0" layoutY="5.0" prefHeight="70.0" prefWidth="22.0" style="-fx-background-color: #6eb1db;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="friRooms" AnchorPane.leftAnchor="210" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: WHITE; -fx-border-radius:5px;" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <JFXButton fx:id="friBookings" AnchorPane.leftAnchor="320.0" layoutX="225.0" layoutY="37.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: WHITE;" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0"  AnchorPane.topAnchor="5.0" />
+                  <AnchorPane fx:id="friButtonRoomsPane" layoutX="220.0" layoutY="5.0" AnchorPane.leftAnchor="210" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #6eb1db#6eb1db;" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane fx:id="friButtonBookingsPane" layoutX="310.0" layoutY="5.0" prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #6eb1db#6eb1db;" AnchorPane.leftAnchor="320" AnchorPane.topAnchor="5.0" />
+                  <AnchorPane layoutX="10.0" viewOrder ="1" layoutY="10.0" AnchorPane.leftAnchor="200" style="-fx-background-color: #457B9D; -fx-background-radius:10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+
+
+
+
+
+
+
+            <Label fx:id="adminTitle" prefHeight="31.0" prefWidth="172.0" text="ADMIN LOGIN" visible="false" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font name="SansSerif Regular" size="26.0" />
+               </font>
+            </Label>
+
+            <TextField fx:id="TFUsername" alignment="CENTER" promptText="ADMIN USERNAME" visible="false" AnchorPane.leftAnchor="130" AnchorPane.rightAnchor="130" AnchorPane.topAnchor="200" />
+            <PasswordField fx:id="TFPassword" alignment="CENTER" promptText="PASSWORD" visible="false" AnchorPane.leftAnchor="130" AnchorPane.rightAnchor="130" AnchorPane.topAnchor="240" />
+            <Button fx:id="buttonLogin" mnemonicParsing="false" onAction="#adminLogin" stylesheets="@styleButtonsAdmin.css" text="Login" textFill="WHITE" visible="false" AnchorPane.leftAnchor="150" AnchorPane.rightAnchor="150" AnchorPane.topAnchor="300" />
+
+         </AnchorPane>
+
+      </Pane>
+
+   </children>
+</AnchorPane>
